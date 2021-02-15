@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Randonm work</title>
 </head>
 <body>
-    
+    <h1 id="activity"></h1>
+    <p>AHA!! </p>
+    <script>
+        function doSomthing(){
+            fetch('https://www.boredapi.com/api/activity/')
+        .then(Response => Response.json())
+        .then(data =>{document.getElementById('activity').innerText = data.activity});
+        }
+        doSomthing();
+        setInterval(() => 
+        {doSomthing();
+        },1000);
+
+        
+    </script>
 </body>
 </html>
